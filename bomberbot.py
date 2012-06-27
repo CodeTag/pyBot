@@ -4,14 +4,14 @@ from bot import Bot
 class BomberBot():
     def __init__(self):
         try:
-            self.conectar("rbBot", "984198716")
+            self.conectar("pyBot", "54654654645")
             self.controlConexion()
         except Exception as e:
             print(e)
 
     def conectar(self, user, token):
         self.socket_cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	self.socket_cliente.connect(("bomberbot.py", 5000))
+	self.socket_cliente.connect(("bomberbot.com", 5000))
         bienvenida = self.socket_cliente.recv(1279)
         print(bienvenida)
         self.socket_cliente.send("%s,%s" % (user, token))
