@@ -9,11 +9,11 @@ class Bot():
         rows = mapa.split('\n')
         map = []
         for index, row in enumerate(rows):
-            map[index] = row.split(",")
+            map.append(row.split(","))
 
         pos = mapa.index(self.letter) / 2
-        self.y = pos / rows.length
-        self.x = pos % rows.length
+        self.y = pos / len(rows)
+        self.x = pos % len(rows)
 
     def move(self):
         mov = random.randrange(0, 8)

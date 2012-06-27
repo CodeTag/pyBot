@@ -23,8 +23,8 @@ class BomberBot():
             print("turno")
 
             server_message = self.socket_cliente.recv(511)
-            
             message = server_message.split(";")
+            print(message[0])
 
             if message[0] == "EMPEZO":
                 bot = Bot(message[2][0])
