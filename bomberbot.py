@@ -11,7 +11,7 @@ class BomberBot():
 
     def conectar(self, user, token):
         self.socket_cliente = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	self.socket_cliente.connect(("localhost", 5000))
+	self.socket_cliente.connect(("bomberbot.py", 5000))
         bienvenida = self.socket_cliente.recv(1279)
         print(bienvenida)
         self.socket_cliente.send("%s,%s" % (user, token))
